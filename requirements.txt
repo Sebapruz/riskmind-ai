@@ -1,0 +1,36 @@
+# RiskMind AI — Dependencias del backend
+# Instalar con: pip install -r requirements.txt
+# Última verificación: 2026-11-09
+
+# --- Core RAG pipeline ---
+langchain==0.3.7
+langchain-community==0.3.7
+langchain-chroma==0.2.2
+langchain-huggingface==0.1.2
+
+# --- Base de datos vectorial ---
+chromadb==0.5.23
+
+# --- Modelo de embeddings (corre local, gratis) ---
+sentence-transformers==3.3.1
+
+# --- Lectura de PDFs ---
+pypdf==5.1.0
+
+# --- API REST ---
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+
+# --- Evaluación RAG ---
+ragas==0.2.8
+
+# --- Utilidades ---
+python-dotenv==1.0.1
+pydantic==2.10.3
+
+# --- LLM para desarrollo local (Ollama) ---
+langchain-ollama==0.3.0
+
+# --- LLM para evaluación final (descomentar según usen) ---
+# langchain-openai==0.3.0
+# langchain-anthropic==0.3.0
