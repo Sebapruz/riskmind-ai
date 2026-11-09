@@ -122,31 +122,38 @@ Debe mostrar ✅ en cada componente. Si algo falla, el script indica cómo resol
 ```
 riskmind-ai/
 ├── backend/
-│   ├── ingestion/        # Carga y chunking de PDFs
-│   │   ├── loader.py     # Carga el PDF
-│   │   └── chunker.py    # Divide en fragmentos
-│   ├── retrieval/        # Búsqueda semántica
-│   │   └── retriever.py  # Busca chunks relevantes
-│   ├── generation/       # Cadena de generación
-│   │   ├── chain.py      # Cadena LangChain
-│   │   └── prompts.py    # Templates de prompts
-│   ├── scoring/          # Cálculo de scores
-│   │   ├── compliance.py # Score de cumplimiento
-│   │   └── risk.py       # Score de riesgo
-│   ├── api/              # Endpoints FastAPI
-│   │   └── main.py       # Rutas de la API
-│   ├── evaluation/       # Scripts de evaluación
-│   │   ├── gold_standard.json
-│   │   ├── run_ragas.py
-│   │   └── run_benchmark.py
-│   └── data/             # Corpus normativo (PDFs, no versionados)
-├── frontend/             # React con TypeScript (Semana 2)
+│ ├── ingestion/ # Carga y chunking de PDFs
+│ │ ├── init.py
+│ │ ├── loader.py # Carga el PDF (Sebastián)
+│ │ └── chunker.py # Divide en fragmentos (Sebastián)
+│ ├── retrieval/ # Búsqueda semántica
+│ │ ├── init.py
+│ │ └── retriever.py # Busca chunks relevantes (Sebastián)
+│ ├── generation/ # Cadena de generación
+│ │ ├── init.py
+│ │ ├── chain.py # Cadena LangChain (Ignacio)
+│ │ └── prompts.py # Templates de prompts (Ignacio)
+│ ├── scoring/ # Cálculo de scores
+│ │ ├── init.py
+│ │ ├── compliance.py # Score de cumplimiento (Ignacio)
+│ │ └── risk.py # Score de riesgo (Ignacio)
+│ ├── api/ # Endpoints FastAPI
+│ │ ├── init.py
+│ │ └── main.py # Rutas de la API (Compartido)
+│ ├── evaluation/ # Scripts de evaluación
+│ │ ├── init.py
+│ │ ├── gold_standard.json
+│ │ ├── run_ragas.py # Métricas RAGAS (Ignacio)
+│ │ └── run_benchmark.py # Benchmark LLM (Ignacio)
+│ └── data/ # Corpus normativo (PDFs, no versionados)
+├── frontend/ # React con TypeScript (Semana 2)
 ├── docs/
-│   └── DECISIONES.md     # Registro de decisiones técnicas
-├── .env.example          # Template de variables de entorno
+│ └── DECISIONES.md # Registro de decisiones técnicas
+├── .env.example # Template de variables de entorno
 ├── .gitignore
-├── requirements.txt
-├── verify_setup.py       # Script de verificación de instalación
+├── requirements.txt # Dependencias con versiones base
+├── requirements.lock # Versiones exactas verificadas (usar este para instalar)
+├── verify_setup.py # Script de verificación de instalación
 └── README.md
 ```
 
