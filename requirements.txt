@@ -19,7 +19,7 @@ pypdf==5.1.0
 
 # --- API REST ---
 fastapi==0.115.6
-uvicorn[standard]==0.34.0
+uvicorn==0.34.0
 
 # --- Evaluación RAG ---
 ragas==0.2.8

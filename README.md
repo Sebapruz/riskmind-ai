@@ -51,27 +51,27 @@ venv\Scripts\activate
 
 ### 3. Instalar dependencias
 
+**macOS / Linux:**
 ```bash
-pip install --upgrade pip
-pip install -r requirements.lock
+python -m pip install --upgrade pip
+python -m pip install -r requirements.lock
+python -m pip install "numpy>=2.0" --no-deps
 ```
 
-> **Nota para Mac M3:** Si `chromadb` o `sentence-transformers` da error de compilación,
-> instalar primero las herramientas de build:
-> ```bash
-> xcode-select --install  # si no lo tienes ya
-> ```
+**Windows:**
+```powershell
+python -m pip install --upgrade pip
+python -m pip install -r requirements-windows.lock
+python -m pip install "numpy>=2.0" --no-deps
+```
 
-> **Nota para Windows:** Si `sentence-transformers` da error con torch, instalar torch primero:
-> ```powershell
-> pip install torch --index-url https://download.pytorch.org/whl/cpu
-> pip install -r requirements.txt
-> ```
+> **Windows requiere Microsoft C++ Build Tools** antes de instalar.
+> Descargar de https://visualstudio.microsoft.com/visual-cpp-build-tools/,
+> marcar "Desarrollo de escritorio con C++", instalar y reiniciar el PC.
 
-> `requirements.lock` tiene las versiones exactas verificadas. Usar este archivo
-> en vez de `requirements.txt` para evitar conflictos de resolución de dependencias.
-> Después de instalar, ejecutar además:
-> pip install "numpy>=2.0" --no-deps
+> El paso de `numpy>=2.0 --no-deps` es necesario porque LangChain declara
+> `numpy<2.0` pero pyarrow (dependencia de RAGAS) requiere `numpy>=2.0`.
+> En la práctica LangChain funciona correctamente con numpy 2.x.
 ### 4. Configurar variables de entorno
 
 ```bash
