@@ -12,7 +12,7 @@ Plataforma de cumplimiento legal GRC impulsada por IA mediante arquitectura RAG.
 
 | Herramienta | Versión mínima | Para qué |
 |---|---|---|
-| Python | 3.10+ | Backend, pipeline RAG |
+| Python | 3.12 (no 3.13 ni 3.14) | Backend, pipeline RAG |
 | Git | 2.30+ | Control de versiones |
 | Node.js | 18+ | Frontend React (Semana 2) |
 | Ollama | latest | LLM local gratuito para desarrollo |
@@ -33,7 +33,7 @@ cd riskmind-ai
 **macOS (Sebastián — MacBook Air M3):**
 
 ```bash
-python3 -m venv venv
+python3.12 -m venv venv
 source venv/bin/activate
 ```
 
@@ -42,7 +42,7 @@ source venv/bin/activate
 **Windows (Ignacio):**
 
 ```powershell
-python -m venv venv
+py -3.12 -m venv venv
 venv\Scripts\activate
 ```
 
@@ -53,7 +53,7 @@ venv\Scripts\activate
 
 ```bash
 pip install --upgrade pip
-pip install -r requirements.txt
+pip install -r requirements.lock
 ```
 
 > **Nota para Mac M3:** Si `chromadb` o `sentence-transformers` da error de compilación,
@@ -68,6 +68,10 @@ pip install -r requirements.txt
 > pip install -r requirements.txt
 > ```
 
+> `requirements.lock` tiene las versiones exactas verificadas. Usar este archivo
+> en vez de `requirements.txt` para evitar conflictos de resolución de dependencias.
+> Después de instalar, ejecutar además:
+> pip install "numpy>=2.0" --no-deps
 ### 4. Configurar variables de entorno
 
 ```bash
