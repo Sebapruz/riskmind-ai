@@ -39,4 +39,22 @@ Es material directo para Cap V (Desarrollo Técnico) y la defensa oral.
 
 ---
 
-<!-- Agregar nuevas decisiones arriba de esta línea -->
+## 2026-11-10: Corpus normativo del piloto
+
+- **Decisión:** Focalizar la validación experimental en la Ley 21.663
+  como única normativa cargada en la base vectorial.
+- **Alternativas descartadas:** Cargar las 4 normativas simultáneamente.
+- **Razón:** Metodológicamente más sólido demostrar profundidad con una
+  normativa que superficie con cuatro. Las restantes quedan soportadas
+  por la arquitectura para iteraciones futuras.
+- **Responsable:** Sebastián
+
+## 2026-11-10: Documentos de evidencia sintéticos
+
+- **Decisión:** Crear 3 documentos ficticios con niveles de cumplimiento
+  controlados (alto, parcial, bajo).
+- **Alternativas descartadas:** Solicitar documentos reales a empresas
+  (inviable por confidencialidad y tiempo).
+- **Razón:** Permiten definir respuestas esperadas exactas para el gold
+  standard, haciendo la evaluación verificable y reproducible.
+- **Responsable:** Sebastián

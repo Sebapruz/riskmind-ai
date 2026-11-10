@@ -158,6 +158,22 @@ riskmind-ai/
 ```
 
 ---
+---
+
+## Corpus normativo y evidencia
+
+La carpeta `backend/data/` no se versiona (los PDFs están en `.gitignore`).
+Antes de ejecutar el pipeline, colocar ahí los siguientes archivos:
+
+| Archivo | Fuente | Propósito |
+|---------|--------|-----------|
+| `ley_21663.pdf` | [BCN - Ley 21.663](https://www.bcn.cl/leychile/navegar?i=1202434) | Normativa principal para la base vectorial |
+| `evidencia_1_techcorp_spa.pdf` | Generado (sintético) | Empresa simulada — buen cumplimiento |
+| `evidencia_2_medipyme_ltda.pdf` | Generado (sintético) | Empresa simulada — cumplimiento parcial |
+| `evidencia_3_logistica_regional_spa.pdf` | Generado (sintético) | Empresa simulada — bajo cumplimiento |
+
+Los documentos de evidencia son sintéticos, diseñados con escenarios controlados
+para permitir verificación determinista de los resultados del pipeline RAG.
 
 ## Flujo de trabajo con Git
 
