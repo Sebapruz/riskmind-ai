@@ -58,3 +58,12 @@ Es material directo para Cap V (Desarrollo Técnico) y la defensa oral.
 - **Razón:** Permiten definir respuestas esperadas exactas para el gold
   standard, haciendo la evaluación verificable y reproducible.
 - **Responsable:** Sebastián
+
+## 2026-11-11: Formalización matemática
+
+- **Decisión:** Definir 7 ecuaciones formales numeradas (similitud coseno,
+  P@k, R@k, MRR, compliance score, risk score, benchmark LLM) más una
+  definición operativa tripartita de alucinación en el Cap 3 (Marco Teórico).
+- **Razón:** El profesor exigió formalización matemática explícita
+  (Puntos 6, 7, 8, 12 y 14 de las observaciones del Avance 1).
+- **Responsable:** Sebastián
